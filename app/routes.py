@@ -9,4 +9,8 @@ def get():
 def post():
     json = request.get_json()
     print(json)
-    return ""
+    if json:
+        return jsonify(json)
+    else:
+        return ""
+
